@@ -236,6 +236,22 @@ objects:
                   value: ${DATABASE_USER}
                 - name: WORDPRESS_DB_PASSWORD
                   value: ${DATABASE_PASSWORD}
+                - name: AUTH_KEY
+                  value: ${AUTH_KEY}
+                - name: SECURE_AUTH_KEY
+                  value: ${SECURE_AUTH_KEY}
+                - name: LOGGED_IN_KEY
+                  value: ${LOGGED_IN_KEY}
+                - name: NONCE_KEY
+                  value: ${NONCE_KEY}
+                - name: AUTH_SALT
+                  value: ${AUTH_SALT}
+                - name: SECURE_AUTH_SALT
+                  value: ${SECURE_AUTH_SALT}
+                - name: LOGGED_IN_SALT
+                  value: ${LOGGED_IN_SALT}
+                - name: NONCE_SALT
+                  value: ${NONCE_SALT}
               volumeMounts:
                 - name: ${APPLICATION_NAME}-uploads
                   mountPath: /opt/app-root/src/pv-uploads
