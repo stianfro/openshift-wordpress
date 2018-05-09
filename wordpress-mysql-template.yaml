@@ -69,6 +69,34 @@ parameters:
     description: Database user password
     generate: expression
     from: "[a-zA-Z0-9]{16}"
+    
+  - name: AUTH_KEY
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: SECURE_AUTH_KEY
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: LOGGED_IN_KEY
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: NONCE_KEY
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: SECURE_AUTH_KEY
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: LOGGED_IN_SALT
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: NONCE_SALT
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
 
 
 objects:
