@@ -10,7 +10,7 @@ metadata:
       A WordPress application with a MySQL database using persistent storage
       for WordPress uploads, WordPress plugins, and MySQL data.
     tags: instant-app,php,wordpress
-    iconClass: icon-php
+    iconClass: icon-wordpress
 labels:
   template: wordpress-mysql
 
