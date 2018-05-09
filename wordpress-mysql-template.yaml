@@ -25,7 +25,7 @@ parameters:
 
   - name: SOURCE_REPOSITORY_URL
     description: The URL of the repository with your application source code
-    value: https://github.com/jaredhocutt/openshift-wordpress.git
+    value: https://github.com/stianfro/openshift-wordpress.git
     required: true
 
   - name: SOURCE_REPOSITORY_REF
