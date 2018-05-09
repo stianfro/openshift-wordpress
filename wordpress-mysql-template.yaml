@@ -86,7 +86,11 @@ parameters:
     generate: expression
     from: "[a-zA-Z0-9]{32}"
 
-  - name: SECURE_AUTH_KEY
+  - name: AUTH_SALT
+    generate: expression
+    from: "[a-zA-Z0-9]{32}"
+
+  - name: SECURE_AUTH_SALT
     generate: expression
     from: "[a-zA-Z0-9]{32}"
 
