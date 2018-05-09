@@ -49,6 +49,11 @@ parameters:
       The exposed hostname that will route to the wordpress service, if left
       blank a value will be defaulted
     value:
+    
+  - name: STORAGE_CLASS
+    description: >
+      The Storage Class to use for Persistant Volume Claims
+    value:
 
   - name: DATABASE_NAME
     description: Database name
@@ -149,6 +154,8 @@ objects:
     apiVersion: v1
     metadata:
       name: ${APPLICATION_NAME}-uploads
+    annotations:
+        volume.beta.kubernetes.io/storage-class: ${STORAGE_CLASS}
     spec:
       accessModes:
         - ReadWriteMany
@@ -233,6 +240,8 @@ objects:
     apiVersion: v1
     metadata:
       name: ${APPLICATION_NAME}-mysql
+      annotations:
+        volume.beta.kubernetes.io/storage-class: ${STORAGE_CLASS}
     spec:
       accessModes:
         - ReadWriteOnce
